@@ -1,24 +1,6 @@
-let nome: string;
-let sobrenome: string;
-let nomeCompleto: string;
-let idade: number;
-let brasileiro: boolean;
-let endereco: string[];
+import { Pessoa } from "./pessoa.js"
 
-nome = "Will";
-sobrenome = "Smith";
-nomeCompleto = nome + " " + sobrenome;
-idade = 43;
-brasileiro = false;
-endereco = ["Aracaju", "Rua B", "Tobias"];
+const diego: Pessoa = new Pessoa("Diego", "Souza", 45, true, ["Rua A"]);
 
-let exibirNomeCompleto = function(): string {
-    return nomeCompleto;
-} 
-
-let recuperarEndereco = function(posicao: number): string {
-    return endereco[posicao] ?? "";
-}
-
-console.log(exibirNomeCompleto());
-console.log(recuperarEndereco(1));
+console.log(diego.exibirNomeCompleto());
+console.log(diego.recuperarEndereco(0));
