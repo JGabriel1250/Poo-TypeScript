@@ -1,16 +1,22 @@
 class Pessoa {
 
-    nome: string;
-    sobrenome: string;
-    idade: number;
-    brasileiro: boolean;
-    endereco: string[];
+    matricula: number = 0;
+    nome: string = " ";
+    sobrenome: string = " ";
+    sexo: string = " ";
+    cpf: string = " ";
+    idade: number = 0;
+    brasileiro: boolean = true;
+    endereco: string[] = [];
 
     static qtdPessoas: number = 0;
 
-    constructor(nome: string, sobrenome: string, idade: number, brasileiro: boolean, endereco: string[]) {
+    constructor(matriculo: number, nome: string, sobrenome: string, sexo: string, cpf: string, idade: number, brasileiro: boolean, endereco: string[]) {
+        this.matricula = matriculo;
         this.nome = nome;
         this.sobrenome = sobrenome;
+        this.sexo = sexo;
+        this.cpf = cpf;
         this.idade = idade;
         this.brasileiro = brasileiro;
         this.endereco = endereco;
