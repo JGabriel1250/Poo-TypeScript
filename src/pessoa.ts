@@ -1,4 +1,4 @@
-class Pessoa {
+abstract class Pessoa {
 
     matricula: number = 0;
     nome: string = " ";
@@ -11,8 +11,8 @@ class Pessoa {
 
     static qtdPessoas: number = 0;
 
-    constructor(matriculo: number, nome: string, sobrenome: string, sexo: string, cpf: string, idade: number, brasileiro: boolean, endereco: string[]) {
-        this.matricula = matriculo;
+    constructor(nome: string, sobrenome: string, sexo: string, cpf: string, idade: number, brasileiro: boolean, endereco: string[]) {
+        this.matricula = this.gerarMatricula();
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.sexo = sexo;
@@ -30,11 +30,12 @@ class Pessoa {
     recuperarEndereco(posicao: number): string {
         return this.endereco[posicao] ?? "";
     }
-
     
     static getQtdPessoa() : number {
         return Pessoa.qtdPessoas;
     }
+
+    abstract gerarMatricula(): number;
     
 }
 
