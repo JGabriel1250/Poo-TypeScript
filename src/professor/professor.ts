@@ -2,7 +2,7 @@ import { Endereco } from "../endereco/endereco.js";
 import { Pessoa } from "../pessoa/pessoa.js";
 import { Projeto } from "../projeto/projeto.js";
 
-class Professor extends Pessoa implements Projeto {
+export class Professor extends Pessoa implements Projeto {
 
     private _salario: number = 0;
 
@@ -11,14 +11,6 @@ class Professor extends Pessoa implements Projeto {
         super(nome, sobrenome, sexo, cpf, idade, brasileiro, endereco);
         this.matricula = this.gerarMatricula();
         this.salario = salario;
-    }
-
-    public get salario(): number {
-        return this._salario;
-    }
-
-    public set salario(value: number) {
-        this._salario = value;
     }
 
     protected gerarMatricula() {
@@ -32,6 +24,13 @@ class Professor extends Pessoa implements Projeto {
         console.log("Isso é uma submissão de projeto de pesquisa de professor.");
     }
 
-}
+    // GETTERS AND SETTERS
 
-export { Professor };
+    public get salario(): number {
+        return this._salario;
+    }
+
+    public set salario(value: number) {
+        this._salario = value;
+    }
+}

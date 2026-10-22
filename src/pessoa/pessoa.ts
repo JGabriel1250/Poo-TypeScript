@@ -1,6 +1,6 @@
 import { Endereco } from "../endereco/endereco.js";
 
-abstract class Pessoa {
+export abstract class Pessoa {
 
     protected _matricula: number = 0;
     protected _nome: string = " ";
@@ -24,6 +24,24 @@ abstract class Pessoa {
         this.endereco = endereco;
         Pessoa.qtdPessoas++;
     }
+
+
+    public exibirNomeCompleto(): string {
+        return (`Nome completo: ${this.nome} ${this.sobrenome}`);
+    }
+
+    public recuperarEndereco(posicao: number): Endereco | undefined {
+        return this.endereco[posicao];
+    }
+
+    static getQtdPessoa(): number {
+        return Pessoa.qtdPessoas;
+    }
+
+    protected abstract gerarMatricula(): number;
+
+
+    // GETTERS AND SETTERS
 
     public get matricula(): number {
         return this._matricula;
@@ -94,22 +112,4 @@ abstract class Pessoa {
         this._endereco = value;
     }
 
-
-
-    public exibirNomeCompleto(): string {
-        return (`Nome completo: ${this.nome} ${this.sobrenome}`);
-    }
-
-    public recuperarEndereco(posicao: number): Endereco | undefined {
-        return this.endereco[posicao];
-    }
-
-    static getQtdPessoa(): number {
-        return Pessoa.qtdPessoas;
-    }
-
-    protected abstract gerarMatricula(): number;
-
 }
-
-export { Pessoa };

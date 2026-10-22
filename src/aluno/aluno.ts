@@ -2,7 +2,7 @@ import { Endereco } from "../endereco/endereco.js";
 import { Pessoa } from "../pessoa/pessoa.js"
 import { Projeto } from "../projeto/projeto.js";
 
-class Aluno extends Pessoa implements Projeto {
+export class Aluno extends Pessoa implements Projeto {
 
     private _curso: string = " ";
     private _situacao: Situacao = Situacao.ATIVO;
@@ -13,22 +13,6 @@ class Aluno extends Pessoa implements Projeto {
         this.curso = curso;
         this.situacao = situacao;
     }
-
-    public get curso(): string {
-        return this._curso;
-    }
-    public set curso(value: string) {
-        this._curso = value;
-    }
-
-    public get situacao(): Situacao {
-        return this._situacao;
-    }
-    public set situacao(value: Situacao) {
-        this._situacao = value;
-    }
-
-
 
     gerarMatricula(): number {
         let ano: number = new Date().getFullYear();
@@ -44,9 +28,25 @@ class Aluno extends Pessoa implements Projeto {
         console.log("Isso é uma submissão de projeto de pesquisa de aluno");
     }
 
+    // GETTERS AND SETTERS
+    
+    public get curso(): string {
+        return this._curso;
+    }
+    public set curso(value: string) {
+        this._curso = value;
+    }
+
+    public get situacao(): Situacao {
+        return this._situacao;
+    }
+    public set situacao(value: Situacao) {
+        this._situacao = value;
+    }
+
 }
 
-enum Situacao {
+export enum Situacao {
     ATIVO = "Ativo",
     MATRICULADO = "Matriculado",
     TRANCADO = 'Trancado',
@@ -54,5 +54,3 @@ enum Situacao {
     CANCELADO = 'Cancelado',
     FORMANDO = 'Formando'
 }
-
-export { Aluno, Situacao }

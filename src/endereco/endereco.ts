@@ -1,4 +1,4 @@
-class Endereco {
+export class Endereco {
     private _CEP: string = " ";
     private _numero: number = 0;
     private _rua: string = " ";
@@ -14,6 +14,8 @@ class Endereco {
         this._cidade = cidade;
         this._estado = estado;
     }
+
+    // GETTERS AND SETTERS
 
     get CEP(): string {
         return this._CEP;
@@ -63,5 +65,3 @@ class Endereco {
         this._estado = estado;
     }
 } 
-
-export { Endereco };
