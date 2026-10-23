@@ -1,3 +1,4 @@
+import { Campus } from "../campus/campus.js";
 import { Endereco } from "../endereco/endereco.js";
 import { Pessoa } from "../pessoa/pessoa.js";
 import { Projeto } from "../projeto/projeto.js";
@@ -5,7 +6,7 @@ import { Projeto } from "../projeto/projeto.js";
 export class Professor extends Pessoa implements Projeto {
 
     private _salario: number = 0;
-
+    private _campus?: Campus;
 
     constructor(nome: string, sobrenome: string, sexo: string, cpf: string, idade: number, brasileiro: boolean, endereco: Endereco[], salario: number) {
         super(nome, sobrenome, sexo, cpf, idade, brasileiro, endereco);
@@ -32,5 +33,13 @@ export class Professor extends Pessoa implements Projeto {
 
     public set salario(value: number) {
         this._salario = value;
+    }
+
+    public get campus(): Campus | undefined {
+        return this._campus;
+    }
+
+    public set campus(value: Campus) {
+        this._campus = value;
     }
 }
