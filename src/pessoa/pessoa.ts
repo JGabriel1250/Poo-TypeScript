@@ -1,4 +1,5 @@
 import { Endereco } from "../endereco/endereco.js";
+import { Evento } from "../evento/evento.js";
 
 export abstract class Pessoa {
 
@@ -10,6 +11,8 @@ export abstract class Pessoa {
     private _idade: number = 0;
     private _brasileiro: boolean = true;
     private _endereco: Endereco[] = [];
+
+    private _eventos: Array<Evento> = []
 
     private static qtdPessoas: number = 0;
 
@@ -39,6 +42,17 @@ export abstract class Pessoa {
     }
 
     protected abstract gerarMatricula(): number;
+
+    adicionarEvento(evento: Evento): void {
+        this._eventos.push(evento);
+    }
+
+    listarEventos(): void {
+        console.log(`Eventos que ${this.nome} está Participando:`);
+        this._eventos.forEach(eve => {
+            console.log(`- ${eve.nome} (${eve.tipoEvento})`);
+        });
+    }
 
 
     // GETTERS AND SETTERS
