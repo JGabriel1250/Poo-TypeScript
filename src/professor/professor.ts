@@ -25,6 +25,10 @@ export class Professor extends Pessoa implements Projeto {
         console.log("Isso é uma submissão de projeto de pesquisa de professor.");
     }
 
+    descreverVinculo(): string {
+        return `Professor Regular - Campus: ${this.campus?.nome || "Não Alocado"} `;
+    }
+
     // GETTERS AND SETTERS
 
     public get salario(): number {

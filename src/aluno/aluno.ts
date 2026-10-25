@@ -28,6 +28,10 @@ export class Aluno extends Pessoa implements Projeto {
         console.log("Isso é uma submissão de projeto de pesquisa de aluno");
     }
 
+    descreverVinculo(): string {
+        return `Aluno Regular - Curso: ${this._curso}, Situação: ${this._situacao}`;
+    }
+
     // GETTERS AND SETTERS
     
     public get curso(): string {
