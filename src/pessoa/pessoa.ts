@@ -54,6 +54,8 @@ export abstract class Pessoa {
         });
     }
 
+    public abstract aptoParaEmprestimo(): boolean;
+
 
     // GETTERS AND SETTERS
 

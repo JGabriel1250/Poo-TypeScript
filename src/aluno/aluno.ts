@@ -28,6 +28,10 @@ export class Aluno extends Pessoa implements Projeto {
         console.log("Isso é uma submissão de projeto de pesquisa de aluno");
     }
 
+    public aptoParaEmprestimo(): boolean {
+        return this.situacao ===  Situacao.ATIVO || this.situacao === Situacao.MATRICULADO;
+    }
+
     // GETTERS AND SETTERS
     
     public get curso(): string {

@@ -15,7 +15,9 @@ export abstract class TecnicoAdministrativo extends Pessoa {
         return Math.floor(Math.random() * 9000) + 1000;
     }
 
-
+    public aptoParaEmprestimo(): boolean {
+        return true;
+    }
 
     // GETTER AND SETTERS
 
