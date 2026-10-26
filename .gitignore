@@ -1,0 +1,12 @@
+# Dependências
+node_modules/
+
+# Código compilado (JavaScript gerado a partir do TypeScript)
+dist/
+
+# Configurações locais do editor
+.vscode/
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
