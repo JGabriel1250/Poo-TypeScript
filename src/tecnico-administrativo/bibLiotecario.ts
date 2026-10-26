@@ -15,7 +15,7 @@ export class Bibliotecario extends TecnicoAdministrativo {
     registrarEmprestimo(emprestimo: Emprestimo): void {
         if(emprestimo.usuario.aptoParaEmprestimo()) {
             this._emprestimo.push(emprestimo);
-            console.log(`Empréstimo do livro ${emprestimo.tituloDoLivro} registrado com sucesso para ${emprestimo.usuario.nome}!`);
+            console.log(`Empréstimo do livro ${emprestimo.tituloDoLivro} registrado com sucesso para ${emprestimo.usuario.exibirNomeCompleto()}!`);
         } else {
             console.log(`Ação bloqueada: O usuário ${emprestimo.usuario.nome} possui matrícula inativa.`);
         }

@@ -1,7 +1,7 @@
 import { Endereco } from "../endereco/endereco.js";
 import { TecnicoAdministrativo } from "./tecnico-administrativo.js";
 
-export class PsicoLogo extends TecnicoAdministrativo {
+export class Psicologo extends TecnicoAdministrativo {
 
     private _CRP: number = 0;
 

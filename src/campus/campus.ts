@@ -19,7 +19,7 @@ export class Campus {
         this._tecnicosAdministrativos = tecnicosAdministrativos; 
     }
 
-    adicionarprofessor(professor: Professor): void {
+    adicionarProfessor(professor: Professor): void {
 
         if (professor.campus !== undefined && professor.campus !== this) {
             throw new Error ("O professor já está alocado a outro campus.");
@@ -32,7 +32,7 @@ export class Campus {
         }
     }
 
-    listarprofessores() : void {
+    listarProfessores() : void {
 
         console.log(`Professores do campus ${this.nome}`);
 

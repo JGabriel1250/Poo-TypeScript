@@ -15,7 +15,7 @@ export class VisitanteDiscente extends Aluno {
     }
 
     descreverVinculo(): string {
-        return `Aluno Visitante - Origem: ${this._instituicaoDeOrigem}, Origem: ${this._cursoDeOrigem}, Período: ${this._periodoDePermanencia}`;
+        return `Aluno Visitante - Instituição: ${this._instituicaoDeOrigem}, Curso: ${this._cursoDeOrigem}, Período: ${this._periodoDePermanencia}`;
     }
 
     gerarMatricula(): number {
