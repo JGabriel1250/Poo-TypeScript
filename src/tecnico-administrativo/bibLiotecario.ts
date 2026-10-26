@@ -1,4 +1,4 @@
-import { Emprestimo } from "../emprestimo/emprestimo.js";
+import { Emprestimo } from "../biblioteca/emprestimo.js";
 import { Endereco } from "../endereco/endereco.js";
 import { TecnicoAdministrativo } from "./tecnico-administrativo.js";
 
