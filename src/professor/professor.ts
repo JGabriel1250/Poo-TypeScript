@@ -25,8 +25,13 @@ export class Professor extends Pessoa implements Projeto {
         console.log("Isso é uma submissão de projeto de pesquisa de professor.");
     }
 
+<<<<<<< HEAD
     public aptoParaEmprestimo(): boolean {
         return true;
+=======
+    descreverVinculo(): string {
+        return `Professor Regular - Campus: ${this.campus?.nome || "Não Alocado"} `;
+>>>>>>> 9981b5922449549f7973ba14b250dfd2080edb88
     }
 
     // GETTERS AND SETTERS

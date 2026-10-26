@@ -37,7 +37,7 @@ export class Campus {
         console.log(`Professores do campus ${this.nome}`);
 
         this._professores.forEach(pf => {
-            console.log(`Nome: ${pf.nome} ${pf.sobrenome} | Matrícula: ${pf.matricula}`)
+            console.log(`Nome: ${pf.nome} ${pf.sobrenome} | Matrícula: ${pf.matricula} | Vínculo: ${pf.descreverVinculo()}`)
         });
      }
 
