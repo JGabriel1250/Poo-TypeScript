@@ -1,7 +1,7 @@
 import { Endereco } from "./endereco/endereco.js";
 import { Aluno, Situacao } from "./aluno/aluno.js";
 import { Professor } from "./professor/professor.js";
-import { Bibliotecario } from "./tecnico-administrativo/bibLiotecario.js";
+import { Bibliotecario } from "./tecnico-administrativo/bibliotecario.js";
 import { Emprestimo } from "./biblioteca/emprestimo.js";
 
 // 1. Instanciando Endereços
