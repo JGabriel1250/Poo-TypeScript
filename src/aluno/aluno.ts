@@ -32,6 +32,10 @@ export class Aluno extends Pessoa implements Projeto {
         return this.situacao ===  Situacao.ATIVO || this.situacao === Situacao.MATRICULADO;
     }
 
+    public descreverVinculo(): string {
+        return `Aluno Regular - Curso: ${this.curso}, Situação: ${this.situacao}`;
+    }
+
     // GETTERS AND SETTERS
     
     public get curso(): string {
