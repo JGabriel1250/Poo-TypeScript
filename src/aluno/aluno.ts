@@ -1,8 +1,9 @@
 import { Endereco } from "../endereco/endereco.js";
 import { Pessoa } from "../pessoa/pessoa.js"
 import { Projeto } from "../projeto/projeto.js";
+import { UsuarioBiblioteca } from "../biblioteca/usuario-biblioteca.js";
 
-export class Aluno extends Pessoa implements Projeto {
+export class Aluno extends Pessoa implements Projeto, UsuarioBiblioteca {
 
     private _curso: string = " ";
     private _situacao: Situacao = Situacao.ATIVO;

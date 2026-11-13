@@ -40,7 +40,7 @@ Abstração e Herança: Uso de classes abstratas (Pessoa, TecnicoAdministrativo)
 
 Encapsulamento: Atributos privados controlados rigidamente por métodos GET e SET.
 
-Polimorfismo: Implementação do método abstrato aptoParaEmprestimo() na superclasse Pessoa, permitindo que o Bibliotecario processe transações de empréstimo de forma totalmente agnóstica em relação ao tipo de usuário (cada subclasse gerencia a sua própria regra de negócio, como validação de matrícula ativa/trancada).
+Polimorfismo: Implementação do contrato UsuarioBiblioteca, que declara a matrícula e a elegibilidade para empréstimo. Aluno e Professor implementam esse contrato, permitindo que o Bibliotecario processe transações de forma totalmente agnóstica em relação ao tipo de usuário (cada classe gerencia a sua própria regra de negócio, como validação de matrícula ativa/trancada).
 
 Regras de Negócio e Associações:
 

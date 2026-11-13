@@ -1,15 +1,15 @@
 import { Endereco } from "../endereco/endereco.js";
-import { Pessoa } from "../pessoa/pessoa.js";
+import { UsuarioBiblioteca } from "./usuario-biblioteca.js";
 
 export class Emprestimo {
 
     private _tituloDoLivro: string;
-    private _usuario: Pessoa;
+    private _usuario: UsuarioBiblioteca;
     private _enderecoUnidade: Endereco;
     private _dataEmprestimo: string;
     private _dataDevolucao: string;
 
-    constructor(titulloDoLivro: string, usuario: Pessoa, enderecoUnidade: Endereco, dataEmprestimo: string, dataDevolucao: string) {
+    constructor(titulloDoLivro: string, usuario: UsuarioBiblioteca, enderecoUnidade: Endereco, dataEmprestimo: string, dataDevolucao: string) {
         this._tituloDoLivro = titulloDoLivro;
         this._usuario = usuario;
         this._enderecoUnidade = enderecoUnidade;
@@ -27,11 +27,11 @@ export class Emprestimo {
         this._tituloDoLivro = value;
     }
 
-    public get usuario(): Pessoa {
+    public get usuario(): UsuarioBiblioteca {
         return this._usuario;
     }
 
-    public set usuario(value: Pessoa) {
+    public set usuario(value: UsuarioBiblioteca) {
         this._usuario = value;
     }
 
